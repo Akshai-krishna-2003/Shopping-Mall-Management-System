@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Customer</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #87bada;
+        }
+
+        /* Form Styles */
+        form {
+            width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+            border: 1px solid #dddddd;
+            border-radius: 5px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Header Styles */
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333; /* Dark gray color for the header text */
+        }
+
+        /* Label Styles */
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #555; /* Dark gray color for labels */
+        }
+
+        /* Input Field Styles */
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #cccccc;
+            border-radius: 3px;
+        }
+
+        /* Submit Button Styles */
+        button[type="submit"] {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #ff8000;
+            color: #ffffff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #f18e1e;
+        }
+    </style>
+</head>
+<body>
+    <h1>Add Customer's Details</h1>
+
+    <form action="" method="post">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="contact">Phone No</label>
+        <input type="text" id="contact" name="contact" required><br>
+
+        <button type="submit">Submit Details</button>
+    </form>
+</body>
+</html>

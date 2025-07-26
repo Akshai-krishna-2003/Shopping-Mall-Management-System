@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Customer List</title>
+    <style>
+        /* Style for the whole body */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #87bada;
+        }
+
+        /* Style for the page header */
+        h1 {
+            text-align: center;
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            margin: 0;
+        }
+
+        /* Style for the table container */
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            border: 1px solid #ddd;
+            background-color: #fff;
+        }
+
+        /* Style for table header cells */
+        th {
+            background-color: #444;
+            color: #fff;
+            padding: 10px;
+            text-align: left;
+        }
+
+        /* Style for table data cells */
+        td {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        /* Style for odd rows */
+        tr:nth-child(odd) {
+            background-color: #f7f7f7;
+        }
+
+        /* Style for the purchase history list */
+        ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        /* Style for purchase history list items */
+        li {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Customer List</h1>
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Contact</th>
+            <th>Purchase History</th>
+            <th>Loyalty Points</th>
+        </tr>
+        {% for customer in customers %}
+        <tr>
+            <td>{{ customer.name }}</td>
+            <td>{{ customer.contact }}</td>
+            <td>
+                <ul>
+                    {% for purchase in customer.purchase_history %}
+                    <li>{{ purchase.product_name }} - {{ purchase.quantity }}</li>
+                    {% endfor %}
+                </ul>
+            </td>
+            <td>{{ customer.loyalty_points }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
